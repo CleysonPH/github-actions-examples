@@ -4,8 +4,15 @@ run-name: Shells e Diretorios de Trabalho
 on:
   - push
 
+# defaults:
+#   run:
+#     shell: pwsh
+
 jobs:
   display-wordir-info:
+    # defaults:
+    #   run:
+    #     shell: pwsh
     runs-on: ubuntu-latest
     steps:
       - name: Display workdir and list files
@@ -15,3 +22,9 @@ jobs:
           echo $GITHUB_SHA
           echo $GITHUB_REPOSITORY
           echo $GITHUB_WORKSPACE
+
+      - name: Python Shell
+        shell: python
+        run: |
+          import platform
+          print(platgorm.processor())
