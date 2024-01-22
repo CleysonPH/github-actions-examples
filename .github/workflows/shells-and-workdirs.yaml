@@ -7,15 +7,18 @@ on:
 # defaults:
 #   run:
 #     shell: pwsh
+#     working-directory: ./temp
 
 jobs:
   display-wordir-info:
     # defaults:
     #   run:
     #     shell: pwsh
+    #     working-directory: ./temp
     runs-on: ubuntu-latest
     steps:
       - name: Display workdir and list files
+        # working-directory: ./temp
         run: |
           pwd
           ls -a
