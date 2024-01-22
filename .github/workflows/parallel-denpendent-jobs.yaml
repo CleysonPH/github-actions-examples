@@ -1,4 +1,4 @@
-name: parallel-denpendent-jobs
+name: parallel-dependent-jobs
 run-name: Jobs paralelos e dependentes
 
 on:
