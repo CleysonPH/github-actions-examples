@@ -27,4 +27,4 @@ jobs:
         shell: python
         run: |
           import platform
-          print(platgorm.processor())
+          print(platform.processor())
