@@ -2,9 +2,11 @@ name: events
 run-name: Events
 
 on:
-  issues:
-    types:
-      - opened
+  pull_request:
+    branches:
+      - "feature/**"
+    paths:
+      - "**.js"
 
 jobs:
   show-ref-and-sha:
