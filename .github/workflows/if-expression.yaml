@@ -1,0 +1,18 @@
+name: if-expression
+run-name: Expressão IF
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  if-expression:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Only on push
+        if: github.event_name == 'push'
+        run: echo 'Foi feito um push'
+
+      - name: Only on pull_request
+        if: github.event_name == 'pull_request'
+        run: echo 'Foi feito uma pull request'
