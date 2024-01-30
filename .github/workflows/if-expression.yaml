@@ -17,8 +17,8 @@ jobs:
         if: github.event_name == 'pull_request'
         run: echo 'Foi feito uma pull request!'
 
-      - name: Failure
-        run: doesnotexists
+      # - name: Failure
+      #   run: doesnotexists
 
       - name: Echo string
         run: echo 'Olá GitHub Action'
