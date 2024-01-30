@@ -11,8 +11,18 @@ jobs:
     steps:
       - name: Only on push
         if: github.event_name == 'push'
-        run: echo 'Foi feito um push'
+        run: echo 'Foi feito um push!'
 
       - name: Only on pull_request
         if: github.event_name == 'pull_request'
-        run: echo 'Foi feito uma pull request'
+        run: echo 'Foi feito uma pull request!'
+
+      - name: Failure
+        run: doesnotexists
+
+      - name: Echo string
+        run: echo 'Olá GitHub Action'
+
+      - name: Execute on failure
+        if: failure()
+        run: echo 'O workflow falhou'
